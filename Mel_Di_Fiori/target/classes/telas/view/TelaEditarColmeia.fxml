@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="crud_colmeia.ColmeiaEditController">
+    
+    <VBox spacing="20" style="-fx-padding: 30;">
+        <Label fx:id="lblTitulo" text="Editar Colmeia" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+        
+        <GridPane hgap="15" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints prefWidth="150"/>
+                <ColumnConstraints prefWidth="300"/>
+            </columnConstraints>
+            
+            <!-- Identificação -->
+            <Label text="Identificação *:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtIdentificacao" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            
+            <!-- Localização -->
+            <Label text="Localização *:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtLocalizacao" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            
+            <!-- Tipo -->
+            <Label text="Tipo *:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="cbTipo" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            
+            <!-- Status -->
+            <Label text="Status *:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="cbStatus" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            
+            <!-- Data Instalação -->
+            <Label text="Data Instalação *:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="dpDataInstalacao" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            
+            <!-- Número de Quadros -->
+            <Label text="Número de Faixas:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <Spinner fx:id="spNumeroQuadros" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+        </GridPane>
+        
+        <!-- Botões -->
+        <HBox spacing="15" alignment="CENTER_RIGHT">
+            <Button text="Cancelar" fx:id="btnCancelar" onAction="#cancelarEdicao" 
+                    style="-fx-background-color: #6c757d; -fx-text-fill: white;"/>
+            <Button text="Atualizar" fx:id="btnAtualizar" onAction="#atualizarColmeia" 
+                    style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </HBox>
+        
+        <Label text="* Campos obrigatórios" style="-fx-font-size: 10; -fx-text-fill: #6c757d;"/>
+    </VBox>
+</StackPane>

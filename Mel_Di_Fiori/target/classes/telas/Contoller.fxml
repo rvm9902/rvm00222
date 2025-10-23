@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="crud_colmeia.ColmeiaEditController"
+            prefWidth="600" prefHeight="400"
+            stylesheets="@/globalStyle/style.css">
+
+    <VBox spacing="10" alignment="TOP_LEFT" layoutX="20" layoutY="20" prefWidth="560">
+        <children>
+            <Label text="Editar Cadastro" styleClass="branco"/>
+
+            <HBox spacing="10">
+                <Label text="Nome:" styleClass="branco" />
+                <TextField fx:id="txtNumero" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Data da matricula:" styleClass="branco" />
+                <DatePicker fx:id="dateInstalacao" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Localização:" styleClass="branco"/>
+                <TextField fx:id="txtLocalizacao" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Tipo de plano:" styleClass="branco"/>
+                <ComboBox fx:id="comboTipo" prefWidth="200"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Quantidade de pessoas:" styleClass="branco"/>
+                <Spinner fx:id="spinnerNumeroQuadros" prefWidth="100" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Situação:" styleClass="branco"/>
+                <ComboBox fx:id="comboSituacao" />
+            </HBox>
+
+            <VBox spacing="5">
+                <Label text="Observações:" styleClass="branco"/>
+                <TextArea fx:id="txtObservacoes" prefRowCount="4" />
+            </VBox>
+
+            <HBox spacing="15">
+                <Button text="Salvar" onAction="#salvarEdicao" />
+                <Button text="Cancelar" onAction="#cancelarEdicao" />
+            </HBox>
+        </children>
+
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10" />
+        </padding>
+    </VBox>
+</AnchorPane>

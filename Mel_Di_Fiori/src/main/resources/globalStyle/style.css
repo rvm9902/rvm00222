@@ -1,0 +1,189 @@
+
+
+
+
+/* ========================================== FUNDO GLOBAL ================================================================================== */
+/* .root: estilos aplicados a todo o aplicativo */
+.root {
+  -fx-font-family: "Verdana", sans-serif;       /* define a família de fontes padrão      ou   -fx-font-family: "Segoe UI", sans-serif;*/
+  -fx-background-color: #ffffff;                /* (🌼 Mel Suave  Pólen Claro) é excelente para fundo de tela background */
+}
+
+
+/* =================================== MENU LATERAL ================================================================================== */
+/* .area-padrao: container do menu lateral */
+.area-padrao {
+
+  -fx-background-color: linear-gradient(to bottom, #a5a5a5, #868686);				 /* O degradê no menu lateral já está no formato correto */
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 102, 255, 0.05), 10, 0, 0, 2);
+  -fx-border-color: transparent;   													 /* Sem borda visível */
+  -fx-border-width: 0;            													 /* Largura da borda zero */
+  -fx-border-radius: 0px;                       									 /* cantos retos (sem arredondamento) */
+  -fx-background-radius: 0px;                     									 /* cantos retos no fundo */
+  -fx-padding: 0 10 10 10;												            /* top right bottom left */
+  -fx-pref-height: Infinity;                    								     /* ocupa toda a altura disponível */
+}
+
+
+
+/* =================================== CABEÇALHO =============================================================================== */
+			/* ==== CABEÇALHO (melhorias visuais) ==== */
+			.cabecalho {
+			  -fx-background-color: linear-gradient(to right, #a5a5a5, #868686);
+			  -fx-padding: 12 16;
+			  -fx-border-width: 0;  /* Remove bordas */
+			  -fx-border-color: transparent;
+			}
+
+			.label.titulo-principal {
+			    -fx-font-family: "Segoe UI", sans-serif;
+			    -fx-font-size: 20px;
+			    -fx-font-weight: bold;
+			    -fx-text-fill: #000000;
+				-fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0) , 4, 0.0 , 0 , 0 ); /* ==== Efeito “neon” (Brilho)==== */
+
+			}
+
+			.relogio-label {
+			    -fx-font-size: 16pt;        /* Fonte maior para o relógio */
+			    -fx-text-fill: #d8b1b1;
+			    -fx-font-family: "Consolas", "Courier New", monospace;
+			    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.3) , 2, 0.0 , 1, 1 );
+			}
+
+			.estacao-label {
+			    -fx-font-size: 12pt;        /* Fonte um pouco menor */
+			    -fx-text-fill: #000000;     /* Marrom Claro (mais suave) */
+			    -fx-font-style: italic;     /* Itálico para um toque leve */
+			    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			.font-Icon-Relogio {
+			    -fx-icon-size: 20px;
+			    -fx-fill: #FFFFFF;
+			}
+
+
+			/* Nome do usuário */
+			.nome-usuario {
+			    -fx-font-size: 16px;
+			    -fx-font-weight: bold;
+			    -fx-text-fill: #000000;
+			    -fx-padding: 0 10 0 0; /* espaçamento à direita para separar da imagem */
+			    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			/* Estilo da imagem do usuário (ImageView) */
+			.image-view {
+			    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 2);
+			    -fx-background-radius: 20px; /* bordas arredondadas */
+			    -fx-cursor: hand;
+			}
+
+			/* Botão de pesquisa */
+			.botao-pesquisa {
+			    /* Herdar o estilo base dos botões */
+			    -fx-background-color: transparent; /* fundo transparente, para não ficar igual aos botões "normais" */
+			    -fx-padding: 5; /* padding igual aos outros botões (ajuste conforme o seu) */
+			    -fx-cursor: hand;
+			    -fx-border-color: transparent;
+			    -fx-effect: none;
+
+			    /* Se quiser, ajuste a largura e altura para ficar igual aos outros botões */
+			    -fx-min-width: 40px;
+			    -fx-min-height: 40px;
+			    -fx-alignment: center;
+			}
+
+			.font-Icon {
+			    -fx-font-size: 18px; /* Ajuste conforme o tamanho dos seus ícones nos botões */
+			    -fx-fill: #333333; /* Cor padrão dos ícones */
+			}
+
+			/* Efeito hover no botão */
+			.botao-pesquisa:hover {
+					-fx-background-color: rgba(255, 255, 255, 0.08);
+					-fx-text-fill: #000000;
+			}
+
+
+
+/* ======================================== Campos de texto ======================================================================== */
+.text-field {
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #000000;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 6;
+}
+.text-field:focused {
+    -fx-border-color: #ffffff;
+}
+
+
+/* ========================================== BOTÕES ================================================================================  */
+/* .button: estilo base para botões  aparência padrão dos botões DO MENU  */
+.button {
+
+	    -fx-background-color: transparent;
+	    -fx-text-fill: #000000;
+	    -fx-font-size: 14px;
+	    -fx-font-weight: normal;
+	    -fx-alignment: CENTER_LEFT;
+	    -fx-padding: 8 16 8 12;
+  		-fx-cursor: hand;                                 /* cursor “mãozinha” no hover */
+  		-fx-graphic-text-gap: 12px; 					  /* espaço maior entre ícone e texto */
+}
+
+
+/* .button:hover: estado ao passar o mouse */
+.button:hover {                                   /* hover sobre botões */
+	-fx-background-color: gray;
+	-fx-text-fill: #ffffff;
+}
+
+
+.font-Icon {
+    -fx-icon-size: 18px;
+    -fx-fill: #000000;
+}
+
+/* Ícone quando o botão está com hover */
+.button:hover .font-Icon {
+    -fx-fill: #000000; /* mesma cor do texto no hover */
+}
+
+
+/* .button: estilo base para botões  aparência padrão dos botões DO BODY */
+.button02 {
+    -fx-background-color: #a5a5a5;
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 8 16 8 12;
+    -fx-cursor: hand;
+    -fx-graphic-text-gap: 12px;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+    
+    /* Remove todos os efeitos padrão do JavaFX */
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+}
+
+.button02:hover {
+    -fx-background-color: #8b8b8b;
+}
+
+.button02:pressed {
+    -fx-background-color: #6e6e6e;
+    -fx-translate-y: 1px; /* Efeito de afundamento quando pressionado */
+}
+
+/* Remove completamente o estilo de foco */
+.button02:focused {
+    -fx-background-color: #a5a5a5;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+}

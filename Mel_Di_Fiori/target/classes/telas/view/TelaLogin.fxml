@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="30" alignment="CENTER"
+      style="-fx-background-color: linear-gradient(to bottom right, #2c3e50, #34495e); -fx-padding: 40;">
+    
+    <!-- Container Principal -->
+    <VBox spacing="25" alignment="CENTER" 
+          style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 40 50 40 50; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 20, 0, 0, 0);">
+        
+        <!-- Cabeçalho -->
+        <VBox spacing="15" alignment="CENTER">
+            <!-- Ícone/Logo -->
+            <ImageView fitWidth="80" fitHeight="80" preserveRatio="true">
+                <!-- Você pode adicionar uma imagem aqui -->
+            </ImageView>
+            
+            <Label text="Jiu-Dojo" 
+                   style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            
+            <Label text="Sistema de Gestão" 
+                   style="-fx-font-size: 16px; -fx-text-fill: #7f8c8d;"/>
+        </VBox>
+
+        <!-- Formulário de Login -->
+        <VBox spacing="20" style="-fx-min-width: 300;">
+            
+            <!-- Campo Usuário -->
+            <VBox spacing="5">
+                <Label text="Usuário" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+                <TextField promptText="Digite seu usuário" 
+                          style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 12; -fx-font-size: 14px; -fx-border-color: #bdc3c7; -fx-focus-color: #3498db;"/>
+            </VBox>
+
+            <!-- Campo Senha -->
+            <VBox spacing="5">
+                <Label text="Senha" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+                <PasswordField promptText="Digite sua senha" 
+                              style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 12; -fx-font-size: 14px; -fx-border-color: #bdc3c7; -fx-focus-color: #3498db;"/>
+            </VBox>
+
+            <!-- Lembrar Senha -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <CheckBox text="Lembrar usuário" 
+                         style="-fx-text-fill: #7f8c8d; -fx-font-size: 13px;"/>
+            </HBox>
+
+            <!-- Botão Entrar -->
+            <Button text="ENTRAR" 
+                   style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: hand;"
+                   onMouseEntered="#handleMouseEnter" 
+                   onMouseExited="#handleMouseExit">
+                <VBox.margin>
+                    <Insets top="10"/>
+                </VBox.margin>
+            </Button>
+
+            <!-- Links -->
+            <HBox spacing="15" alignment="CENTER" style="-fx-padding: 10 0 0 0;">
+                <Button text="Esqueci a senha" 
+                       style="-fx-background-color: transparent; -fx-text-fill: #3498db; -fx-underline: true; -fx-cursor: hand;"/>
+                
+                <Label text="|" style="-fx-text-fill: #bdc3c7;"/>
+                
+                <Button text="Solicitar acesso" 
+                       style="-fx-background-color: transparent; -fx-text-fill: #3498db; -fx-underline: true; -fx-cursor: hand;"/>
+            </HBox>
+        </VBox>
+
+        <!-- Rodapé -->
+        <VBox spacing="5" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+            <Label text="Versão 1.0" style="-fx-font-size: 12px; -fx-text-fill: #bdc3c7;"/>
+            <Label text="© 2024 Jiu-Dojo Academy" style="-fx-font-size: 12px; -fx-text-fill: #bdc3c7;"/>
+        </VBox>
+    </VBox>
+
+    <!-- Versão Mobile Responsiva (opcional) -->
+    <HBox spacing="10" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+        <Label text="📱" style="-fx-font-size: 14px;"/>
+        <Label text="App também disponível para mobile" style="-fx-font-size: 12px; -fx-text-fill: #ecf0f1;"/>
+    </HBox>
+</VBox>

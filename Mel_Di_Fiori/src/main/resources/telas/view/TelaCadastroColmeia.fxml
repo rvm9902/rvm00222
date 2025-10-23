@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaração padrão de arquivo XML -->
+
+<!-- Importações dos componentes JavaFX usados no layout -->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<!--
+    💡 CadastroColmeia.fxml
+
+    Tela para cadastro de colmeias no sistema "Mel Di Fiori".
+    Utiliza AnchorPane como container principal.
+    Organiza os campos de entrada em VBox e HBox para layout limpo.
+    Controlada pela classe ColmeiaController.java.
+-->
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="crud_colmeia.ColmeiaCreateController"
+            prefWidth="600" prefHeight="400">
+
+    <VBox spacing="10" alignment="TOP_LEFT" layoutX="20" layoutY="20" prefWidth="560">
+
+        <children>
+
+            <!-- Título da tela -->
+            <Label text="Cadastro de Aluno" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+            <!-- Linha horizontal com label e campo texto para "Identificação" -->
+            <HBox spacing="10">
+                <Label text="Identificação:" />
+                <TextField fx:id="txtNumero" promptText="Ex: Colmeia A1" />
+            </HBox>
+            
+
+            <!-- Linha para Data de Instalação com DatePicker -->
+            <HBox spacing="10">
+                <Label text="Data de Matricula:" />
+                <DatePicker fx:id="dateInstalacao" />
+            </HBox>
+
+            
+            <HBox spacing="10">
+                <Label text="Localização:" />
+                <TextField fx:id="txtLocalizacao" promptText="Ex: Setor Norte" />
+            </HBox>
+
+            <!-- Linha para Tipo da Caixa com ComboBox -->
+            <HBox spacing="10">
+                <Label text="Tipo de plano:" />
+                <ComboBox fx:id="comboTipo" promptText="Selecione o tipo" prefWidth="200"/>
+            </HBox>
+
+            <!-- Linha para Número de Quadros com Spinner -->
+            <HBox spacing="10">
+                <Label text="Número de faixas:" />
+                <Spinner fx:id="spinnerNumeroQuadros" prefWidth="100" />
+            </HBox>
+
+            <!-- Linha para Situação com ComboBox -->
+            <HBox spacing="10">
+                <Label text="Situação do aluno:" />
+                <ComboBox fx:id="comboSituacao" promptText="Selecione uma opção" />
+            </HBox> 
+
+            <!-- Área para observações com label e TextArea -->
+            <VBox spacing="5">
+                <Label text="Observações:" />
+                <TextArea fx:id="txtObservacoes" prefRowCount="4" />
+            </VBox>
+
+            <!-- Linha com botões Salvar e Limpar -->
+            <HBox spacing="15">
+                <Button text="Salvar" onAction="#salvarColmeia" />
+                <Button text="Limpar" onAction="#limparCampos" />
+            </HBox>
+
+        </children>
+
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10" />
+        </padding>
+
+    </VBox>
+</AnchorPane>
